@@ -6,7 +6,7 @@
 1. Setup your Drupal files in 'src' directory. This should be a composer project with the 'web' directory. Refer to Drupal's official documentation on how to do this.  
 2. Copy the example_docker-compose.yml to docker-compose.yml  
 3. Modify the MYSQL_USER, MYSQL_PASSWORD, and MYSQL_DATABASE options in docker-compose.yml as needed.  
-3. Modify your src/web/sites/default/settings.php to reflect the credentials in step 3.
+3. Modify your src/web/sites/default/settings.php to reflect the credentials in step 3. 'Host' should be set to 'db'.
 4. Run: docker compose up  
 
 ## Upgrading:  
