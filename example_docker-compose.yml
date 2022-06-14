@@ -39,6 +39,7 @@ services:
       MYSQL_USER: 'drupal'
       MYSQL_PASSWORD: 'drupal'
       MYSQL_DATABASE: 'drupal'
+      MYSQL_ROOT_PASSWORD: 'root'
     volumes:
       - ./sql-data:/var/lib/mysql
     ports:
