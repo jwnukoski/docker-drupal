@@ -1,7 +1,6 @@
 # What is this?
 - This a Docker template for spinning up a development Drupal instance with a PHP / NGINX / MYSQL stack.  
 - This project DOES NOT control your file permissions. You should follow best practices as needed. See the Drupal and SQL documentation.  
-- This project doesn't currently set up SSL for you.  
   
 ## Prior to running:  
 1. Setup your Drupal files in 'src' directory. This should be a composer project with the 'web' directory. Refer to Drupal's official documentation on how to do this. From this directory, it would currently be:  
