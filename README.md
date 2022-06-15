@@ -27,9 +27,12 @@
   
 - NGINX config is in the ./nginx directory.  
 
+- Put your SSL certs in .nginx/certs. The will be mounted to /etc/nginx/certs. Update the file name in ./nginx/nginx.conf in ssl_certfiticate and ssl_certificate_key. Make sure to prepend your file paths with 'certs/'.
+
 ## Notes:  
 - Never commit actual database credentials to the docker-compose.yml file. By default this file is in the .gitignore directory to prevent you from doing this.  
   
 - This project is NOT intended to be used for production. Modify it at your own risk and needs.  
   
-- For development only, if you get file permission errors, you can do `chmod 777 -R ./src` for the fastest start.  
+- For development ONLY, if you get file permission errors, you can do `chmod 777 -R ./src` for the fastest start. For HTTPS, you can also generate a self-signed cert like so:  
+openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem

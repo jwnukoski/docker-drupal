@@ -25,6 +25,7 @@ services:
     volumes:
       - ./src:/var/www
       - ./nginx:/etc/nginx/conf.d
+      - ./nginx/certs:/etc/nginx/certs
     depends_on:
       - php-fpm
     networks:
