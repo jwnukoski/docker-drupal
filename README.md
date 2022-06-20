@@ -36,5 +36,4 @@ You cannot use Drush directly from your local machine, due to how Docker contain
   
 - This project is NOT intended to be used for production. Modify it at your own risk and needs.  
   
-- For development ONLY, if you get file permission errors, you can do `chmod 777 -R ./src` for the fastest start. For HTTPS, you can also generate a self-signed cert like so:  
-openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+- Make sure to properly set your permissions on your src folder. For development you can try: `chgrp -R www-data src && chmod -R 755 src && chmod -R 777 src/web/sites/default/files`
