@@ -24,8 +24,6 @@ services:
   #   environment:
   #     PMA_HOST: db
   #     PMA_PORT: 3306
-  #     PMA_USER: 'root'
-  #     PMA_PASSWORD: 'root'
   #   networks:
   #     - drupal-network
   #   depends_on:
