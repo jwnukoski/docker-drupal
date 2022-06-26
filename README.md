@@ -31,6 +31,9 @@
 ## Running Drush
 You cannot use Drush directly from your local machine, due to how Docker container networks work. The PHP-FPM dockerfile is already setup to install composer and the latest drush. To access it you can run: `docker container ls`, look for your related container id for php-fpm, and then run `docker exec -it [DockerPhpFpmContainerId] sh`. From there you should be able to execute drush in the /var/www folder. This works, because this container has access to both your SQL container, and your Drupal src folder.
 
+## PhpMyAdmin
+Uncomment the example phpmyadmin Docker example in the docker-compose.yml file. By default it is ran on localhost:8080. Whenever moving to a production environment, be sure to change credentials and port access as needed! Your initial login could be done with the username 'root' and whatever password you set in the 'db' container 'MYSQL_ROOT_PASSWORD' field.
+
 ## Notes:  
 - Never commit actual database credentials to the docker-compose.yml file. By default this file is in the .gitignore directory to prevent you from doing this.  
   
